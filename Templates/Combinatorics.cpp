@@ -7,6 +7,10 @@ namespace combinatorics
         if(x<0||y>x)return(0);
         return(fac[x]*finv[y]%MOD*finv[x-y]%MOD);
     }
+    ll nPr(ll x,ll y){
+        if(x<0||y<0||y>x) return 0;
+        return fac[x]*finv[x-y]%MOD;
+    }
     ll power(ll b,ll n)
     {
         b%=MOD;
